@@ -216,7 +216,7 @@ export default function Home() {
             <button
               id="qa-dead-btn-primary"
               type="button"
-              className="qa-dead-btn qa-dead-btn-primary h-11 rounded-full border border-black px-5 text-sm font-medium text-white bg-black"
+              className="qa-dead-btn qa-dead-btn-primary h-11 rounded-full border border-black px-5 text-sm font-medium text-white bg-black transition-transform active:scale-95"
               aria-label="Primary QA dummy button"
             >
               QA Dummy Primary
@@ -224,7 +224,7 @@ export default function Home() {
             <button
               id="qa-dead-btn-secondary"
               type="button"
-              className="qa-dead-btn qa-dead-btn-secondary h-11 rounded-full border border-black px-5 text-sm font-medium text-black bg-white"
+              className="qa-dead-btn qa-dead-btn-secondary h-11 rounded-full border border-black px-5 text-sm font-medium text-black bg-white transition-transform active:scale-95"
               aria-label="Secondary QA dummy button"
             >
               QA Dummy Secondary
@@ -232,7 +232,7 @@ export default function Home() {
             <button
               id="qa-dead-btn-ghost"
               type="button"
-              className="qa-dead-btn qa-dead-btn-ghost h-11 rounded-full border border-black px-5 text-sm font-medium text-black/70 bg-white"
+              className="qa-dead-btn qa-dead-btn-ghost h-11 rounded-full border border-black px-5 text-sm font-medium text-black/70 bg-white transition-transform active:scale-95"
               aria-label="Ghost QA dummy button"
             >
               QA Dummy Ghost
