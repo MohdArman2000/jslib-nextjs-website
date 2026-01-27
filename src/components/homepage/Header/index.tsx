@@ -93,7 +93,7 @@ const Header = () => {
           initial={false}
           animate={{ y: 0, opacity: 1, rotate: 0 }}
           transition={{ duration: 0.2 }}
-          className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat"
+          className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-no-repeat overflow-hidden"
         >
           <Image
             priority
@@ -101,7 +101,7 @@ const Header = () => {
             alt="Header background mobile"
             fill
             sizes="(max-width: 768px) 100vw, 0px"
-            className="absolute inset-0 -z-10 object-cover object-top md:hidden"
+            className="absolute inset-0 z-0 object-cover object-top md:hidden"
           />
           <Image
             priority
@@ -109,7 +109,7 @@ const Header = () => {
             alt="Header background"
             fill
             sizes="(min-width: 768px) 50vw, 0px"
-            className="absolute inset-0 -z-10 hidden md:block object-cover object-top xl:object-[center_top_-1.6rem]"
+            className="absolute inset-0 z-0 hidden md:block object-cover object-top xl:object-[center_top_-1.6rem]"
           />
           <Image
             priority
@@ -117,7 +117,7 @@ const Header = () => {
             height={104}
             width={104}
             alt="big star"
-            className="absolute right-7 xl:right-0 top-12 max-w-[76px] max-h-[76px] lg:max-w-24 lg:max-h-max-w-24 xl:max-w-[104px] xl:max-h-[104px] animate-[spin_4s_infinite]"
+            className="absolute right-7 xl:right-0 top-12 z-10 max-w-[76px] max-h-[76px] lg:max-w-24 lg:max-h-max-w-24 xl:max-w-[104px] xl:max-h-[104px] animate-[spin_4s_infinite]"
           />
           <Image
             priority
@@ -125,7 +125,7 @@ const Header = () => {
             height={56}
             width={56}
             alt="small star"
-            className="absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite]"
+            className="absolute left-7 md:left-0 top-36 sm:top-64 md:top-44 lg:top-56 z-10 max-w-11 max-h-11 md:max-w-14 md:max-h-14 animate-[spin_3s_infinite]"
           />
         </motion.section>
       </div>
