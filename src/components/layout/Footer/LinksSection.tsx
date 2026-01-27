@@ -1,6 +1,5 @@
 import React from "react";
 import { FooterLinks } from "./footer.types";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const footerLinksData: FooterLinks[] = [
@@ -11,22 +10,22 @@ const footerLinksData: FooterLinks[] = [
       {
         id: 11,
         label: "about",
-        url: "/about",
+        url: "/company/about",
       },
       {
         id: 12,
         label: "features",
-        url: "/shop",
+        url: "/company/features",
       },
       {
         id: 13,
         label: "works",
-        url: "/shop",
+        url: "/company/works",
       },
       {
         id: 14,
         label: "career",
-        url: "/contact",
+        url: "/company/career",
       },
     ],
   },
@@ -37,22 +36,22 @@ const footerLinksData: FooterLinks[] = [
       {
         id: 21,
         label: "customer support",
-        url: "/contact",
+        url: "/help/support",
       },
       {
         id: 22,
         label: "delivery details",
-        url: "/shop",
+        url: "/help/delivery",
       },
       {
         id: 23,
         label: "terms & conditions",
-        url: "/about",
+        url: "/help/terms",
       },
       {
         id: 24,
         label: "privacy policy",
-        url: "/about",
+        url: "/help/privacy",
       },
     ],
   },
@@ -63,22 +62,22 @@ const footerLinksData: FooterLinks[] = [
       {
         id: 31,
         label: "account",
-        url: "/contact",
+        url: "/faq/account",
       },
       {
         id: 32,
         label: "manage deliveries",
-        url: "/shop",
+        url: "/faq/deliveries",
       },
       {
         id: 33,
         label: "orders",
-        url: "/cart",
+        url: "/faq/orders",
       },
       {
         id: 34,
         label: "payments",
-        url: "/cart",
+        url: "/faq/payments",
       },
     ],
   },
@@ -89,22 +88,22 @@ const footerLinksData: FooterLinks[] = [
       {
         id: 41,
         label: "Free eBooks",
-        url: "/about",
+        url: "/resources/ebooks",
       },
       {
         id: 42,
         label: "development tutorial",
-        url: "/about",
+        url: "/resources/tutorials",
       },
       {
         id: 43,
         label: "How to - Blog",
-        url: "/about",
+        url: "/resources/blog",
       },
       {
         id: 44,
         label: "youtube playlist",
-        url: "/about",
+        url: "/resources/youtube",
       },
     ],
   },
@@ -119,7 +118,7 @@ const LinksSection = () => {
             {item.title}
           </h3>
           {item.children.map((link) => (
-            <Link
+            <a
               href={link.url}
               key={link.id}
               className={cn([
@@ -128,7 +127,7 @@ const LinksSection = () => {
               ])}
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </section>
       ))}
