@@ -22,6 +22,34 @@ const iframeHtml = `
         padding: 20px;
         max-width: 520px;
       }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .btn {
+        height: 40px;
+        border-radius: 999px;
+        border: 1px solid #111827;
+        padding: 0 16px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background: #111827;
+        color: #ffffff;
+      }
+      .btn-secondary {
+        background: #ffffff;
+        color: #111827;
+      }
+      .btn-muted {
+        background: #f3f4f6;
+        color: #374151;
+        border-color: #d1d5db;
+      }
       .badge {
         display: inline-block;
         font-size: 12px;
@@ -51,6 +79,11 @@ const iframeHtml = `
           This content is rendered inside an iframe for client-side validation
           and experiment testing.
         </p>
+        <div class="actions">
+          <button class="btn btn-primary" type="button">Primary CTA</button>
+          <button class="btn btn-secondary" type="button">Secondary CTA</button>
+          <button class="btn btn-muted" type="button">Muted CTA</button>
+        </div>
       </div>
     </div>
   </body>
