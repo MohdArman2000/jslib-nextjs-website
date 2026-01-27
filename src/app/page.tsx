@@ -211,6 +211,34 @@ export default function Home() {
       <Header />
       <Brands />
       <main className="my-[50px] sm:my-[72px]">
+        <div className="max-w-frame mx-auto px-4 xl:px-0 mb-10 sm:mb-12">
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              id="qa-dead-btn-primary"
+              type="button"
+              className="qa-dead-btn qa-dead-btn-primary h-11 rounded-full bg-black px-5 text-sm font-medium text-white"
+              aria-label="Primary QA dummy button"
+            >
+              QA Dummy Primary
+            </button>
+            <button
+              id="qa-dead-btn-secondary"
+              type="button"
+              className="qa-dead-btn qa-dead-btn-secondary h-11 rounded-full border border-black/15 px-5 text-sm font-medium text-black"
+              aria-label="Secondary QA dummy button"
+            >
+              QA Dummy Secondary
+            </button>
+            <button
+              id="qa-dead-btn-ghost"
+              type="button"
+              className="qa-dead-btn qa-dead-btn-ghost h-11 rounded-full px-5 text-sm font-medium text-black/60 hover:text-black"
+              aria-label="Ghost QA dummy button"
+            >
+              QA Dummy Ghost
+            </button>
+          </div>
+        </div>
         <ProductListSec
           title="NEW ARRIVALS"
           data={newArrivalsData}
