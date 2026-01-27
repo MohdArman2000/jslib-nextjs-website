@@ -1,14 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Development Tutorials",
+  description: "Guides for setting up QA experiments and validating events.",
+  highlights: ["Routing", "Events", "SmartCode"],
+  cards: [
+    {
+      title: "SmartCode setup",
+      description: "Install and verify SmartCode loading behavior.",
+    },
+    {
+      title: "Event validation",
+      description: "Simulate conversions and track goal firing.",
+    },
+  ],
+};
+
 export default function ResourcesTutorialsPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-          Development Tutorials
-        </h1>
-        <p className="text-black/60">
-          Guides for setting up QA experiments and validating events.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }

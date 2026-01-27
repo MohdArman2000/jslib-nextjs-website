@@ -1,12 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Career",
+  description: "Open roles and ways to contribute to the QA environment.",
+  highlights: ["Automation", "Frontend QA", "Analytics"],
+  cards: [
+    {
+      title: "QA Engineer",
+      description: "Build and maintain end-to-end scenarios.",
+    },
+    {
+      title: "Frontend Partner",
+      description: "Prototype UI variants for experimentation.",
+    },
+  ],
+};
+
 export default function CompanyCareerPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Career</h1>
-        <p className="text-black/60">
-          Open roles and ways to contribute to the QA environment.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }

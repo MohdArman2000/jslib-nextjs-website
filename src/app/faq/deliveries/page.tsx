@@ -1,14 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Manage Deliveries",
+  description: "Delivery management scenarios and expected QA behavior.",
+  highlights: ["Address change", "Schedule", "Status updates"],
+  cards: [
+    {
+      title: "Reschedule",
+      description: "Verify date selection and confirmation messaging.",
+    },
+    {
+      title: "Address update",
+      description: "Test validation for address forms and fields.",
+    },
+  ],
+};
+
 export default function FaqDeliveriesPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-          Manage Deliveries
-        </h1>
-        <p className="text-black/60">
-          Delivery management scenarios and expected QA behavior.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }

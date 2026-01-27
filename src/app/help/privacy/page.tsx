@@ -1,12 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Privacy Policy",
+  description: "How QA data is stored, processed, and used for experiments.",
+  highlights: ["Masked data", "Short retention", "Internal access"],
+  cards: [
+    {
+      title: "Retention",
+      description: "QA logs are rotated regularly for safety.",
+    },
+    {
+      title: "Consent",
+      description: "All data is simulated and non-personal.",
+    },
+  ],
+};
+
 export default function HelpPrivacyPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Privacy Policy</h1>
-        <p className="text-black/60">
-          How QA data is stored, processed, and used for experiments.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }

@@ -1,12 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Works",
+  description: "Example flows and journeys used for QA validation.",
+  highlights: ["Home", "Product list", "PDP", "Cart"],
+  cards: [
+    {
+      title: "Discovery",
+      description: "Homepage to category browsing flow.",
+    },
+    {
+      title: "Conversion",
+      description: "Product page to cart and checkout flow.",
+    },
+  ],
+};
+
 export default function CompanyWorksPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Works</h1>
-        <p className="text-black/60">
-          Example flows and journeys used for QA validation.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }

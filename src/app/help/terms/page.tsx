@@ -1,14 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Terms & Conditions",
+  description: "Usage guidelines for QA assets, experiments, and test data.",
+  highlights: ["Non-production", "No PII", "Testing only"],
+  cards: [
+    {
+      title: "Data handling",
+      description: "Use mock data for all QA scenarios.",
+    },
+    {
+      title: "Access",
+      description: "Links are for internal testing and demos.",
+    },
+  ],
+};
+
 export default function HelpTermsPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-          Terms &amp; Conditions
-        </h1>
-        <p className="text-black/60">
-          Usage guidelines for QA assets, experiments, and test data.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }

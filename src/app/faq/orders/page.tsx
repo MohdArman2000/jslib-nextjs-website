@@ -1,12 +1,28 @@
+import SimplePage from "@/components/common/SimplePage";
+
+const content = {
+  title: "Orders",
+  description: "Order tracking and status updates used for QA validation.",
+  highlights: ["Tracking", "Returns", "Refunds"],
+  cards: [
+    {
+      title: "Order status",
+      description: "Validate shipped, delivered, and delayed states.",
+    },
+    {
+      title: "Return flow",
+      description: "Test CTA placement and form submission.",
+    },
+  ],
+};
+
 export default function FaqOrdersPage() {
   return (
-    <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Orders</h1>
-        <p className="text-black/60">
-          Order tracking and status updates used for QA validation.
-        </p>
-      </div>
-    </main>
+    <SimplePage
+      title={content.title}
+      description={content.description}
+      highlights={content.highlights}
+      cards={content.cards}
+    />
   );
 }
