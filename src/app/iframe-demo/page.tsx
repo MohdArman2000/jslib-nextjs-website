@@ -36,6 +36,10 @@ const iframeHtml = `
         font-size: 13px;
         font-weight: 600;
         cursor: pointer;
+        transition: transform 0.15s ease;
+      }
+      .btn:active {
+        transform: scale(0.95);
       }
       .btn-primary {
         background: #111827;
