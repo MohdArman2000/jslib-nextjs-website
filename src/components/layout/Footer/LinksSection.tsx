@@ -105,6 +105,11 @@ const footerLinksData: FooterLinks[] = [
         label: "youtube playlist",
         url: "/resources/youtube",
       },
+      {
+        id: 45,
+        label: "iframe demo",
+        url: "/iframe-demo",
+      },
     ],
   },
 ];
