@@ -16,6 +16,12 @@ const data: Product[] = [
   ...relatedProductData,
 ];
 
+export function generateStaticParams() {
+  return data.map((product) => ({
+    slug: [String(product.id)],
+  }));
+}
+
 export default function ProductPage({
   params,
 }: {
