@@ -22,7 +22,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const vwoAccountId = process.env.NEXT_PUBLIC_VWO_ACCOUNT_ID;
+  const vwoAccountId =
+    process.env.NEXT_PUBLIC_VWO_ACCOUNT_ID ?? "1079634";
 
   return (
     <html lang="en">
