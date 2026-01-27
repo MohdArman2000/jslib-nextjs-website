@@ -2,16 +2,25 @@
 
 import { Product } from "@/types/product.types";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
+import { withBasePath } from "@/lib/utils";
 
 const PhotoSection = ({ data }: { data: Product }) => {
-  const [selected, setSelected] = useState<string>(data.srcUrl);
+  const normalizedGallery = useMemo(
+    () => data.gallery?.map((photo) => withBasePath(photo)) ?? [],
+    [data.gallery]
+  );
+  const normalizedSrcUrl = useMemo(
+    () => withBasePath(data.srcUrl),
+    [data.srcUrl]
+  );
+  const [selected, setSelected] = useState<string>(normalizedSrcUrl);
 
   return (
     <div className="flex flex-col-reverse lg:flex-row lg:space-x-3.5">
-      {data?.gallery && data.gallery.length > 0 && (
+      {normalizedGallery.length > 0 && (
         <div className="flex lg:flex-col space-x-3 lg:space-x-0 lg:space-y-3.5 w-full lg:w-fit items-center lg:justify-start justify-center">
-          {data.gallery.map((photo, index) => (
+          {normalizedGallery.map((photo, index) => (
             <button
               key={index}
               type="button"

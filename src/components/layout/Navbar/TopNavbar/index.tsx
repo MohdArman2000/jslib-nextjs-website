@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Link from "next/link";
 import React from "react";
@@ -105,7 +105,7 @@ const TopNavbar = () => {
           <InputGroup.Text>
             <Image
               priority
-              src="/icons/search.svg"
+              src={withBasePath("/icons/search.svg")}
               height={20}
               width={20}
               alt="search"
@@ -123,7 +123,7 @@ const TopNavbar = () => {
           <Link href="/search" className="block md:hidden mr-[14px] p-1">
             <Image
               priority
-              src="/icons/search-black.svg"
+              src={withBasePath("/icons/search-black.svg")}
               height={100}
               width={100}
               alt="search"
@@ -134,7 +134,7 @@ const TopNavbar = () => {
           <Link href="/#signin" className="p-1">
             <Image
               priority
-              src="/icons/user.svg"
+              src={withBasePath("/icons/user.svg")}
               height={100}
               width={100}
               alt="user"

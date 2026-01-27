@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import React from "react";
 import * as motion from "framer-motion/client";
@@ -30,12 +30,18 @@ const DressStyle = () => {
           <DressStyleCard
             title="Casual"
             url="/shop#casual"
-            className="md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] bg-[url('/images/dress-style-1.png')]"
+            className="md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px]"
+            style={{
+              backgroundImage: `url(${withBasePath("/images/dress-style-1.png")})`,
+            }}
           />
           <DressStyleCard
             title="Formal"
             url="/shop#formal"
-            className="md:max-w-[684px] h-[190px] bg-[url('/images/dress-style-2.png')]"
+            className="md:max-w-[684px] h-[190px]"
+            style={{
+              backgroundImage: `url(${withBasePath("/images/dress-style-2.png")})`,
+            }}
           />
         </motion.div>
         <motion.div
@@ -48,12 +54,18 @@ const DressStyle = () => {
           <DressStyleCard
             title="Party"
             url="/shop#party"
-            className="md:max-w-[684px] h-[190px] bg-[url('/images/dress-style-3.png')]"
+            className="md:max-w-[684px] h-[190px]"
+            style={{
+              backgroundImage: `url(${withBasePath("/images/dress-style-3.png")})`,
+            }}
           />
           <DressStyleCard
             title="Gym"
             url="/shop#gym"
-            className="md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] bg-[url('/images/dress-style-4.png')]"
+            className="md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px]"
+            style={{
+              backgroundImage: `url(${withBasePath("/images/dress-style-4.png")})`,
+            }}
           />
         </motion.div>
       </section>

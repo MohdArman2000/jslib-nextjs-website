@@ -1,6 +1,7 @@
 "use client";
 
 import { useAppSelector } from "@/lib/hooks/redux";
+import { withBasePath } from "@/lib/utils";
 import { RootState } from "@/lib/store";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,7 @@ const CartBtn = () => {
     <Link href="/cart" className="relative mr-[14px] p-1">
       <Image
         priority
-        src="/icons/cart.svg"
+        src={withBasePath("/icons/cart.svg")}
         height={100}
         width={100}
         alt="cart"

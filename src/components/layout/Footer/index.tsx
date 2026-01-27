@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import React from "react";
 import { PaymentBadge, SocialNetworks } from "./footer.types";
@@ -130,7 +130,7 @@ const Footer = () => {
                 >
                   <Image
                     priority
-                    src={badge.srcUrl}
+                    src={withBasePath(badge.srcUrl)}
                     width={33}
                     height={100}
                     alt="user"

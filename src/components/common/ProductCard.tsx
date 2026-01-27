@@ -3,6 +3,7 @@ import Rating from "../ui/Rating";
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/product.types";
+import { withBasePath } from "@/lib/utils";
 
 type ProductCardProps = {
   data: Product;
@@ -16,7 +17,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
     >
       <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
         <Image
-          src={data.srcUrl}
+          src={withBasePath(data.srcUrl)}
           width={295}
           height={298}
           className="rounded-md w-full h-full object-contain hover:scale-110 transition-all duration-500"

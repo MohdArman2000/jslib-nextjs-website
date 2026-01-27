@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/utils";
 import React from "react";
 
 const brandsData: { id: string; srcUrl: string }[] = [
@@ -32,7 +33,7 @@ const Brands = () => {
           <Image
             key={brand.id}
             priority
-            src={brand.srcUrl}
+            src={withBasePath(brand.srcUrl)}
             height={0}
             width={0}
             alt={brand.id}
