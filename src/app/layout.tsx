@@ -6,6 +6,7 @@ import TopNavbar from "@/components/layout/Navbar/TopNavbar";
 import Footer from "@/components/layout/Footer";
 import HolyLoader from "holy-loader";
 import Providers from "./providers";
+import { VWOScript } from "vwo-smartcode-nextjs";
 
 export const metadata: Metadata = {
   title: "Shopco",
@@ -21,8 +22,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const vwoAccountId = process.env.NEXT_PUBLIC_VWO_ACCOUNT_ID;
+
   return (
     <html lang="en">
+      <head>
+        {vwoAccountId ? <VWOScript accountId={vwoAccountId} /> : null}
+      </head>
       <body className={satoshi.className}>
         <HolyLoader color="#868686" />
         <TopBanner />
