@@ -1,6 +1,6 @@
 import React from "react";
 import { FooterLinks } from "./footer.types";
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 
 const footerLinksData: FooterLinks[] = [
   {
@@ -119,7 +119,7 @@ const LinksSection = () => {
           </h3>
           {item.children.map((link) => (
             <a
-              href={link.url}
+              href={withBasePath(link.url)}
               key={link.id}
               className={cn([
                 link.id !== 41 && link.id !== 43 && "capitalize",
