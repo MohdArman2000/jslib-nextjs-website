@@ -90,10 +90,9 @@ const Header = () => {
           </motion.div>
         </section>
         <motion.section
-          initial={{ y: "100px", opacity: 0, rotate: 10 }}
-          whileInView={{ y: "0", opacity: 1, rotate: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 2.3, duration: 0.8 }}
+          initial={false}
+          animate={{ y: 0, opacity: 1, rotate: 0 }}
+          transition={{ duration: 0.2 }}
           className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat"
         >
           <Image
