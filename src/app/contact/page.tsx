@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/utils";
+
 export default function ContactPage() {
   return (
     <main className="max-w-frame mx-auto px-4 xl:px-0 py-10 sm:py-14">
@@ -7,7 +9,11 @@ export default function ContactPage() {
           Have a request for a QA scenario or a new page? Share the details and
           we will add it to this test site.
         </p>
-        <form className="grid gap-4" method="post" action="#">
+        <form
+          className="grid gap-4"
+          method="get"
+          action={withBasePath("/contact/thanks")}
+        >
           <div className="grid gap-2">
             <label htmlFor="name" className="text-sm font-medium">
               Full name
@@ -18,7 +24,6 @@ export default function ContactPage() {
               type="text"
               placeholder="Jane Doe"
               className="h-12 rounded-xl border border-black/10 px-4 bg-white"
-              required
             />
           </div>
           <div className="grid gap-2">
@@ -31,7 +36,6 @@ export default function ContactPage() {
               type="email"
               placeholder="jane@company.com"
               className="h-12 rounded-xl border border-black/10 px-4 bg-white"
-              required
             />
           </div>
           <div className="grid gap-2">
@@ -60,7 +64,6 @@ export default function ContactPage() {
               rows={5}
               placeholder="Describe the QA scenario or page you want."
               className="rounded-xl border border-black/10 px-4 py-3 bg-white"
-              required
             />
           </div>
           <button
