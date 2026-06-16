@@ -35,7 +35,7 @@
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
     "vaul": "^0.9.4",
-    "vwo-smartcode-nextjs": "^1.4.2"
+    "wingify-smartcode-nextjs": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
