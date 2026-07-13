@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <WingifyScript accountId="1245333" />
+        <WingifyScript accountId="1254978" />
       </head>
       <body className={satoshi.className}>
         <HolyLoader color="#868686" />
